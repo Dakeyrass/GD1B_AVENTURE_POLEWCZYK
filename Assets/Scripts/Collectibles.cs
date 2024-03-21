@@ -10,6 +10,7 @@ public class Collectibles : MonoBehaviour
     private Rigidbody2D body;
     private BoxCollider2D col;
 
+
     // Start is called before the first frame update
     void Start()
     {

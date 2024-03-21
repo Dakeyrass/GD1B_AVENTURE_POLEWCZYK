@@ -25,6 +25,7 @@ public class Controles : MonoBehaviour
         body.velocity = deplacements * speed;
 
         //flip horizontal
+        //NE PAS OUBLIER DE MODIFIER VALEURS QUAND TU L'AGGRANDIRAS: 1f => xf
         if (horizontal > 0)
         {
             transform.localScale = new Vector3(1f, 1f);
@@ -33,14 +34,6 @@ public class Controles : MonoBehaviour
         {
             transform.localScale = new Vector3(-1f, 1f);
         }
-        //flip vertical
-        if (vertical > 0)
-        {
-            transform.localScale = new Vector3(1f, 1f);
-        }
-        else if (vertical < 0)
-        {
-            transform.localScale = new Vector3(-1f, 1f);
-        }
+        
     }
 }
