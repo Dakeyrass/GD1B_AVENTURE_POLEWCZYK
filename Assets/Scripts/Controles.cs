@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Controles : MonoBehaviour
 {
     [SerializeField] private float speed;
-
+    public float pv;
     private Rigidbody2D body;
 
     // Start is called before the first frame update
@@ -21,19 +22,17 @@ public class Controles : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         //DEPLACEMENTS
         Vector2 deplacements = new Vector2(horizontal, vertical);
-        //On applique la vélocité au rgdbd et on la multiplie par la vitesse souhaitée
+        //On applique la vï¿½locitï¿½ au rgdbd et on la multiplie par la vitesse souhaitï¿½e
+        deplacements.Normalize();
         body.velocity = deplacements * speed;
+    }
 
-        //flip horizontal
-        //NE PAS OUBLIER DE MODIFIER VALEURS QUAND TU L'AGGRANDIRAS: 1f => xf
-        if (horizontal > 0)
-        {
-            transform.localScale = new Vector3(1f, 1f);
+    private void OnTriggerEnter2D (Collider2D other){
+        if (other.CompareTag("Ennemi")){
+            pv -= 1;
+            if (pv<=0){
+                Destroy(gameObject);
+            }
         }
-        else if (horizontal < 0)
-        {
-            transform.localScale = new Vector3(-1f, 1f);
-        }
-        
     }
 }
