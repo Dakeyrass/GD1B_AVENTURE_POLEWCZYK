@@ -21,7 +21,7 @@ public class Ennemi : MonoBehaviour
         distance = Vector2.Distance(transform.position, cible.transform.position);
         
         if (distance<range){
-            //Debut, cible, vitesse
+            //(Debut, cible, vitesse)
             transform.position = Vector2.MoveTowards(transform.position, cible.transform.position, speed*Time.deltaTime);
         }
     }
