@@ -8,6 +8,8 @@ TagManager:
   - Ennemi
   - TP
   - Objet
+  - Arme
+  - atk
   layers:
   - Default
   - TransparentFX
