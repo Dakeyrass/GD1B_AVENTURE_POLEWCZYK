@@ -14,13 +14,14 @@ public class Controles : MonoBehaviour
     private int collectible = 0;
     private BoxCollider2D col;
     private bool invincible = false;
-
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
+        anim = GetComponent<Animator>();
         DontDestroyOnLoad(this);
     }
 
@@ -56,6 +57,7 @@ public class Controles : MonoBehaviour
         //mort du joueur et perte de pv  
         if (other.CompareTag("Ennemi") && !invincible)
         {
+            anim.SetTrigger("hit");
             pv -= 1;
             Debug.Log(pv);
             if (pv == 0)
