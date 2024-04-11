@@ -20,14 +20,17 @@ public class PickUp : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Player")){
-            for (int i=0; i< inventory.slots.Length; i++)
+        Debug.Log("Test1");
+        if (other.CompareTag("Player")){
+            Debug.Log("Test2");
+            for (int i=0; i<inventory.slots.Length; i++)
             //length definit le nombre d'elements dans le tableau. ex: i<length
             //on a une variable entiere de depart egale a 0. En tres gros ici il parcourt le tableau autant de fois que le nombre de slots dans l'inventaire du joueur.
                 if (inventory.isFull[i] == false){
                     //item peut etre ajoute
                     inventory.isFull[i]=true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);
+                    Debug.Log("ONE MORE TIME"); 
                     //Pour que l'item button spawn au mm endroit que l'inventory slot ui. 
                     Destroy(gameObject);
                     break;
