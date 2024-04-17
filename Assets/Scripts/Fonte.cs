@@ -18,9 +18,8 @@ public class Fonte : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Debug.Log("" + fonte_time + " CONNARD");
         if(index_scene == 3 && !isnt_melting())
         {
             Melt();

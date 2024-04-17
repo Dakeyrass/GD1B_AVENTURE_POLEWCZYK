@@ -22,7 +22,7 @@ public class Attaque : MonoBehaviour
     {
         //AIM
         Vector3 displacement = pivot_atk.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //permet de recup la position de la souris et de la convertir en unit (vu qu'elle est en pixel à l'origine)
+        //permet de recup la position de la souris et de la convertir en unit (vu qu'elle est en pixel ï¿½ l'origine)
         float angle = -Mathf.Atan2(displacement.x, displacement.y) * Mathf.Rad2Deg;
         pivot_atk.rotation = Quaternion.Euler(0, 0, angle + offset);
 
@@ -32,7 +32,7 @@ public class Attaque : MonoBehaviour
         }
     }
 
-    //Si le joueur rencontre l'arme, il la récupère, elle disparait + il peut attaquer 
+    //Si le joueur rencontre l'arme, il la rï¿½cupï¿½re, elle disparait + il peut attaquer 
     private void OnTriggerEnter2D(Collider2D other)
     {
        if (other.CompareTag("Arme"))

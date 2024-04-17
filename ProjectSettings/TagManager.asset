@@ -11,6 +11,7 @@ TagManager:
   - Arme
   - atk
   - Safe_zone
+  - InteracUI
   layers:
   - Default
   - TransparentFX
