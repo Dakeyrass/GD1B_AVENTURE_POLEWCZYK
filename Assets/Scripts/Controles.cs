@@ -35,16 +35,6 @@ public class Controles : MonoBehaviour
         //On applique la v�locit� au rgdbd et on la multiplie par la vitesse souhait�e
         deplacements.Normalize();
         body.velocity = deplacements * speed;
-
-        //FLIP
-        if (horizontal > 0)
-        {
-            transform.localScale = new Vector3(1f, 1f);
-        }
-        else if (horizontal < 0)
-        {
-            transform.localScale = new Vector3(-1f, 1f);
-        }
     }
 
     private void OnTriggerEnter2D (Collider2D other){
@@ -69,11 +59,6 @@ public class Controles : MonoBehaviour
                 invincible = true;
             }
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
     }
     public void IFrames()
     {
