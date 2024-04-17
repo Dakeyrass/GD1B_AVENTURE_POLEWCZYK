@@ -31,10 +31,9 @@ public class Inventaire : MonoBehaviour
             other.gameObject.SetActive(false);
             UI_key.enabled = true; 
         }
-    }
-
-    void UsingKey()
-    {
-
+        if (hasKey)
+        {
+             
+        }
     }
 }
