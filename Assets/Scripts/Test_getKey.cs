@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 
-public class Inventory : MonoBehaviour
+public class Test_getKey : MonoBehaviour
 {
-    public bool[] isFull;
-    public GameObject[] slots;
+    public Image UI_key;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        UI_key.enabled = false;
     }
 
     // Update is called once per frame
@@ -18,6 +18,4 @@ public class Inventory : MonoBehaviour
     {
         
     }
-
-
 }
