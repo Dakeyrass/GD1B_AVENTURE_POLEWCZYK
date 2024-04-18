@@ -47,7 +47,7 @@ public class Dia_Manager : MonoBehaviour
 
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeSentence(sentence)); //les coroutines se fonctionnent en mm temps que le reste du code donc c'et utile. 
     }
     IEnumerator TypeSentence(string sentence)
     {

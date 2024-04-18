@@ -28,6 +28,7 @@ public class Dia_Trigger : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             isInRange = true;
+
             interacUI.enabled = true;
         }
     }
@@ -43,7 +44,7 @@ public class Dia_Trigger : MonoBehaviour
         }
     }
 
-    private void Awake()
+    private void Awake()//awake c'est quand ça passe d'actif à inactif. 
     {
         interacUI = GameObject.FindGameObjectWithTag("InteracUI").GetComponent<Text>();
     }
