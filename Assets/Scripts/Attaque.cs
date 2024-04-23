@@ -5,16 +5,19 @@ using UnityEngine;
 public class Attaque : MonoBehaviour
 {
     public BoxCollider2D atk;
-    private bool hasWeapon = false;
+    public bool hasWeapon = false;
 
     public Transform pivot_atk;
     public float offset;
+
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         atk.enabled = false;
         hasWeapon = false;
+        anim = GetComponent <Animator>();
     }
 
     // Update is called once per frame
