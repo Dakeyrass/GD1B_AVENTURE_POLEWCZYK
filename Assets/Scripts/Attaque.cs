@@ -16,7 +16,6 @@ public class Attaque : MonoBehaviour
     void Start()
     {
         atk.enabled = false;
-        hasWeapon = false;
         anim = GetComponent <Animator>();
     }
 

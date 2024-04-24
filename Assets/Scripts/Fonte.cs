@@ -39,8 +39,8 @@ public class Fonte : MonoBehaviour
     {
         //position, diametre, layermask
         return Physics2D.OverlapCircle(transform.position, 0.5f, safe_zone);
-        //overlap permet de détecter certains éléments dans une zone donnée.
-        //Ici on return à chaque fois pour savoir si oui ou non le jour est dans la safe zone.
+        //overlap permet de dï¿½tecter certains ï¿½lï¿½ments dans une zone donnï¿½e.
+        //Ici on return ï¿½ chaque fois pour savoir si oui ou non le jour est dans la safe zone.
     }
 
     void Melt()
@@ -50,7 +50,7 @@ public class Fonte : MonoBehaviour
         fonte_time -= fonte_speed;
         if( fonte_time <= 0)
         {
-            
+            fonte_time = 0;
             anim.SetTrigger("fonte");
         }
     }
