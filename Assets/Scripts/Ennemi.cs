@@ -21,6 +21,7 @@ public class Ennemi : MonoBehaviour
         rgbd = GetComponent<Rigidbody2D>();
         playerAnimator = playerObject.GetComponent <Animator>();
         player = FindObjectOfType<Attaque>();
+        cible = GameObject.FindWithTag("Player");
         //je viens chercher le script Attaque afin d'avoir acces a hasWeapon (sinon le joueur pouvait attaquer mm sans l'arme).
     }
 

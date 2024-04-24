@@ -15,6 +15,7 @@ public class Controles : MonoBehaviour
     private BoxCollider2D col;
     private bool invincible = false;
     private Animator anim;
+    private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class Controles : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         DontDestroyOnLoad(this);
     }
 
@@ -35,7 +37,20 @@ public class Controles : MonoBehaviour
         //On applique la v�locit� au rgdbd et on la multiplie par la vitesse souhait�e
         deplacements.Normalize();
         body.velocity = deplacements * speed;
+
+        //FLIP
+        //if (horizontal < 0)
+        //{
+        //    spriteRenderer.flipX = !spriteRenderer.flipX;
+        //} => retiré car le personnage avait juste des crises d'epilepsie.
+
+        //ANIMATION
+        anim.SetBool("run", horizontal!=0 || vertical!=0);
+
     }
+
+
+
 
     private void OnTriggerEnter2D (Collider2D other){
         if (other.CompareTag("Collectible"))

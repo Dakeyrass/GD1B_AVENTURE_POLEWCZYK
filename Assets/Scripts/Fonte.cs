@@ -9,12 +9,18 @@ public class Fonte : MonoBehaviour
     public float fonte_speed;
     public float fonte_time;
 
+    private Animator anim;
+
+    
+
     public RectTransform fonte_barre;
     public LayerMask safe_zone;
 
     void Start()
     {
         index_scene = SceneManager.GetActiveScene().buildIndex;
+        anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -22,8 +28,11 @@ public class Fonte : MonoBehaviour
     {
         if(index_scene == 3 && !isnt_melting())
         {
+            
             Melt();
         }
+
+        
     }
 
     private bool isnt_melting()
@@ -41,7 +50,13 @@ public class Fonte : MonoBehaviour
         fonte_time -= fonte_speed;
         if( fonte_time <= 0)
         {
-            Destroy(gameObject);
+            
+            anim.SetTrigger("fonte");
         }
+    }
+
+    public void DestroyPlayer()
+    {
+        Destroy(gameObject);
     }
 }
