@@ -16,7 +16,8 @@ public class Dia_Trigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isInRange && Input.GetKeyDown(KeyCode.E))
+        Debug.Log(interacUI);
+        if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
             TriggerDialogue();
         }
@@ -28,7 +29,6 @@ public class Dia_Trigger : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             isInRange = true;
-
             interacUI.enabled = true;
         }
     }
