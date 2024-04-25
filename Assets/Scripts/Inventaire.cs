@@ -7,20 +7,22 @@ public class Inventaire : MonoBehaviour
 {
     private bool hasKey;
     public Image UI_key;
+    public Image lettre; 
 
     // Start is called before the first frame update
     void Start()
     {
 
         hasKey = false;
-        //sert pour plus tard quand utilisation de la clé
+        //sert pour plus tard quand utilisation de la clï¿½
         UI_key.enabled = false;
+        lettre.enabled = false; 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        Affiche_lettre();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -38,7 +40,19 @@ public class Inventaire : MonoBehaviour
             if (collision.gameObject.tag == "Porte"  && hasKey)
             {
                 Destroy(collision.gameObject);
-            UI_key.enabled = false; 
+                UI_key.enabled = false; 
             }
+    }
+
+    private void Affiche_lettre()
+    {
+        if (Input.GetKey(KeyCode.R)){
+            lettre.enabled = true; 
+        }
+        else if (Input.GetKeyUp(KeyCode.R))
+        {
+            lettre.enabled = false; 
+        }
+
     }
 }

@@ -16,7 +16,6 @@ public class Dia_Trigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(interacUI);
         if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
             TriggerDialogue();
@@ -44,7 +43,7 @@ public class Dia_Trigger : MonoBehaviour
         }
     }
 
-    private void Awake()//awake c'est quand ça passe d'actif à inactif. 
+    private void Awake()//awake c'est quand ï¿½a passe d'actif ï¿½ inactif. 
     {
         interacUI = GameObject.FindGameObjectWithTag("InteracUI").GetComponent<Text>();
     }
