@@ -64,7 +64,7 @@ public class Controles : MonoBehaviour
         {
             anim.SetTrigger("hit");
             pv -= 1;
-            Debug.Log(pv);
+            
             if (pv == 0)
             {
                 restart();
@@ -77,7 +77,7 @@ public class Controles : MonoBehaviour
     }
     public void IFrames()
     {
-        Debug.Log("fin");
+        
         invincible = false;
     }
     public void restart()
