@@ -45,7 +45,7 @@ public class Ennemi : MonoBehaviour
                 if (vie <= 0)
                 {
                     Instantiate(itemAdrop,transform.position,Quaternion.identity);
-                    Destroy(gameObject);
+                    gameObject.SetActive(false);
                 }
         }
     }

@@ -13,7 +13,13 @@ public class Controles : MonoBehaviour
     [SerializeField] private Text collectible_counter;
     private int collectible = 0;
     private BoxCollider2D col;
+    //Iframe
     private bool invincible = false;
+    //UI vie
+    //public Image[] coeur;
+    //public Sprite vie_remplie;
+    //public Sprite vie_vide;
+
     private Animator anim;
     private SpriteRenderer spriteRenderer;
 
@@ -42,11 +48,21 @@ public class Controles : MonoBehaviour
         //if (horizontal < 0)
         //{
         //    spriteRenderer.flipX = !spriteRenderer.flipX;
-        //} => retiré car le personnage avait juste des crises d'epilepsie.
+        //} => retiré car le personnage flip à l'infini dans un laps de temps très court.
 
         //ANIMATION
         anim.SetBool("run", horizontal!=0 || vertical!=0);
 
+        ////UI VIE
+        //foreach(Image img in coeur)
+        //{
+        //    img.sprite = vie_vide;
+        //}
+        ////equivalent de for i in range de python
+        //for(int i = 0; i<pv; i++)
+        //{
+        //    coeur[i].sprite = vie_remplie;
+        //}
     }
 
 
