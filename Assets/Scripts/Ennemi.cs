@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ennemi : MonoBehaviour
 {
     public float vie;
-    public GameObject cible;
+    public GameObject cible, itemAdrop;
     public float range;
     public float speed;
     private float distance;
@@ -44,7 +44,8 @@ public class Ennemi : MonoBehaviour
             playerAnimator.SetTrigger("attack");
                 if (vie <= 0)
                 {
-                    Destroy(rgbd.gameObject);
+                    Instantiate(itemAdrop,transform.position,Quaternion.identity);
+                    Destroy(gameObject);
                 }
         }
     }

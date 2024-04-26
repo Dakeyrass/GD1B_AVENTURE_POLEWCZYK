@@ -2,21 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Inventaire : MonoBehaviour
 {
     private bool hasKey;
     public Image UI_key;
-    public Image lettre; 
+    public Image lettre;
+    public Image UI_potion;
+    private bool hasPotion; 
 
     // Start is called before the first frame update
     void Start()
     {
 
         hasKey = false;
-        //sert pour plus tard quand utilisation de la cl�
+        hasPotion = false; 
         UI_key.enabled = false;
         lettre.enabled = false; 
+        UI_potion.enabled = false; 
     }
 
     // Update is called once per frame
@@ -33,6 +37,12 @@ public class Inventaire : MonoBehaviour
             other.gameObject.SetActive(false);
             UI_key.enabled = true;
         }
+        if (other.CompareTag("Potion"))
+        {
+            hasPotion = true;
+            other.gameObject.SetActive(false);
+            UI_potion.enabled = true; 
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -46,7 +56,8 @@ public class Inventaire : MonoBehaviour
 
     private void Affiche_lettre()
     {
-        if (Input.GetKey(KeyCode.R)){
+        if (Input.GetKey(KeyCode.R))
+        {
             lettre.enabled = true; 
         }
         else if (Input.GetKeyUp(KeyCode.R))

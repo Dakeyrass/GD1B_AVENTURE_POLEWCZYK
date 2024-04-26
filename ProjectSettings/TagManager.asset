@@ -13,6 +13,7 @@ TagManager:
   - Safe_zone
   - InteracUI
   - Porte
+  - Potion
   layers:
   - Default
   - TransparentFX
