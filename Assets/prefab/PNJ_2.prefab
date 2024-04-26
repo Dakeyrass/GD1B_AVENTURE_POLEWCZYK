@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3409340715199770842
+--- !u!1 &8310823528077350664
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4888330994178617126}
-  - component: {fileID: 7510469291868169530}
-  - component: {fileID: 3121713757865124108}
-  - component: {fileID: 3523748121426808044}
-  - component: {fileID: 1154361272628692539}
-  - component: {fileID: 1986497085196968992}
+  - component: {fileID: 1810312364022549984}
+  - component: {fileID: 3623440120355987649}
+  - component: {fileID: 1432452624267982659}
+  - component: {fileID: 8754435847480411971}
   m_Layer: 0
-  m_Name: Ennemi
-  m_TagString: Ennemi
+  m_Name: PNJ_2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4888330994178617126
+--- !u!4 &1810312364022549984
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3409340715199770842}
+  m_GameObject: {fileID: 8310823528077350664}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.81, y: -0.44, z: -0.1}
-  m_LocalScale: {x: 0.7131881, y: 0.62912804, z: 1}
+  m_LocalPosition: {x: 6.56, y: -1.09, z: 0}
+  m_LocalScale: {x: 0.76828253, y: 0.6772, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7510469291868169530
+--- !u!212 &3623440120355987649
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3409340715199770842}
+  m_GameObject: {fileID: 8310823528077350664}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -77,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3fb9c330e1f2f0b4fa1677dc53cd6063, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5078799203260cb46b2662016aa5ac53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,13 +86,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &3121713757865124108
-CapsuleCollider2D:
+--- !u!61 &1432452624267982659
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3409340715199770842}
+  m_GameObject: {fileID: 8310823528077350664}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -120,72 +118,39 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.18856427}
-  m_Size: {x: 0.9999999, y: 1.1336136}
-  m_Direction: 0
---- !u!114 &3523748121426808044
+  m_Offset: {x: 0.1015048, y: -0.08403313}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.4100876, y: 2.8901298}
+  m_EdgeRadius: 0
+--- !u!114 &8754435847480411971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3409340715199770842}
+  m_GameObject: {fileID: 8310823528077350664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a821b8b5f0d98d84cba1a11822589652, type: 3}
+  m_Script: {fileID: 11500000, guid: 577ac90f8a1f9aa4d97d7e60e2d3d1ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vie: 3
-  cible: {fileID: 0}
-  itemAdrop: {fileID: 0}
-  range: 5
-  speed: 2
-  playerObject: {fileID: 0}
---- !u!50 &1154361272628692539
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3409340715199770842}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!95 &1986497085196968992
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3409340715199770842}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d2fa95606e8cd2347a657cbd8695b7da, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  dialogue:
+    name: Inconnu/e
+    sentences:
+    - "C'est vrai que tu t'es fait mettre \n\xE0 la porte? Quoi? C'est toi qu'a voulu
+      partir? \nOhlala...\nJ'imagine bien dans quel \xE9tat devait\n\xEAtre le Maitre
+      Mineur.  "
+    - "Tu t'es fait engueul\xE9 pas vrai?"
+    - "Il t'a demand\xE9 de lui ramener quelque chose \nen \xE9change de ta libert\xE9?
+      Hm. Bizarre. \nEt c'est quoi? "
+    - "Une potion? Il pouvait pas se la faire lui m\xEAme?\nPffff. Quel profiteur. "
+  isInRange: 0
