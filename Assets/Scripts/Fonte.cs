@@ -51,12 +51,21 @@ public class Fonte : MonoBehaviour
         if( fonte_time <= 0)
         {
             fonte_time = 0;
-            anim.SetTrigger("fonte");
+            anim.Play("fonte");
+            ResetFonte();
         }
+    }
+
+    public void ResetFonte()
+    {
+        fonte_time = 100f;
+        fonte_speed = 0;    
+        anim.StopPlayback();
+
     }
 
     public void DestroyPlayer()
     {
-        Destroy(gameObject);
+        SceneManager.LoadSceneAsync(4);
     }
 }

@@ -32739,7 +32739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95637ff6160943740bc0614462de10a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fonte_speed: 0.1
+  fonte_speed: 0.03
   fonte_time: 100
   fonte_barre: {fileID: 4048040320213398030}
   safe_zone:

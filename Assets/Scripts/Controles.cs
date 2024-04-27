@@ -98,6 +98,6 @@ public class Controles : MonoBehaviour
     }
     public void restart()
     {
-        SceneManager.LoadSceneAsync(4);
+        SceneManager.LoadSceneAsync(1);
     }
 }

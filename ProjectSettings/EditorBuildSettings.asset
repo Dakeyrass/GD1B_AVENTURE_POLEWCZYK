@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu principal.unity
     guid: 770ccb0c7e64746489313f6c8b469535
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/test.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MINES.unity
+    guid: 4defb0ea102ddda43b6876ec771ba91f
   - enabled: 1
     path: Assets/Scenes/PLAINE.unity
     guid: c6cd8b0017c5482449336b9b2b3fb286
@@ -18,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/BURN.unity
     guid: 05d2d60f9bd9db54284dd37dcbd885f8
   - enabled: 1
-    path: Assets/Scenes/MINES.unity
-    guid: 4defb0ea102ddda43b6876ec771ba91f
+    path: Assets/Scenes/MINES2.unity
+    guid: 94030566c7bd7db4c861ad8f77754c11
   - enabled: 0
     path: Assets/Scenes/GROTTE.unity
     guid: ad590f92bdc91244baf642231ec91920
