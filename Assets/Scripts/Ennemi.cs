@@ -5,14 +5,15 @@ using UnityEngine;
 public class Ennemi : MonoBehaviour
 {
     public float vie;
-    public GameObject cible, itemAdrop;
+    private GameObject cible;
+    public GameObject itemAdrop;
     public float range;
     public float speed;
     private float distance;
     private Rigidbody2D rgbd;
 
     private Animator playerAnimator;
-    public GameObject playerObject;
+    private GameObject playerObject;
     private Attaque player;
 
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class Ennemi : MonoBehaviour
         playerAnimator = playerObject.GetComponent <Animator>();
         player = FindObjectOfType<Attaque>();
         cible = GameObject.FindWithTag("Player");
+        playerObject = GameObject.FindWithTag("Player");
         //je viens chercher le script Attaque afin d'avoir acces a hasWeapon (sinon le joueur pouvait attaquer mm sans l'arme).
     }
 
