@@ -15,6 +15,9 @@ public class IndexScene : MonoBehaviour
             if(scene_index == 2){
                 Destroy(other.gameObject);
             }
+            if(scene_index == 3){
+                Destroy(other.gameObject);
+            }
             
         }
     }
