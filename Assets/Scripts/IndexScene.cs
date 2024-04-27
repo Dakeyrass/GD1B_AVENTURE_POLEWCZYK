@@ -11,7 +11,11 @@ public class IndexScene : MonoBehaviour
         if (other.CompareTag("Player"))
         {
 
-            SceneManager.LoadScene(scene_index);
+            SceneManager.LoadSceneAsync(scene_index);
+            if(scene_index == 2){
+                Destroy(other.gameObject);
+            }
+            
         }
     }
 }
