@@ -89,8 +89,9 @@ public class Controles : MonoBehaviour
             {
                 invincible = true;
             }
-        }
+        }    
     }
+    
     public void IFrames()
     {
         
@@ -99,5 +100,6 @@ public class Controles : MonoBehaviour
     public void restart()
     {
         SceneManager.LoadSceneAsync(1);
+        
     }
 }

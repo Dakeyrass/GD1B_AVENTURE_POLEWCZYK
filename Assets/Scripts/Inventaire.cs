@@ -10,14 +10,13 @@ public class Inventaire : MonoBehaviour
     public Image UI_key;
     public Image lettre;
     public Image UI_potion;
-    private bool hasPotion; 
+     
 
     // Start is called before the first frame update
     void Start()
     {
 
-        hasKey = false;
-        hasPotion = false; 
+        hasKey = false; 
         UI_key.enabled = false;
         lettre.enabled = false; 
         UI_potion.enabled = false; 
@@ -39,7 +38,6 @@ public class Inventaire : MonoBehaviour
         }
         if (other.CompareTag("Potion"))
         {
-            hasPotion = true;
             other.gameObject.SetActive(false);
             UI_potion.enabled = true; 
         }

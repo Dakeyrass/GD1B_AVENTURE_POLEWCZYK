@@ -14,6 +14,8 @@ TagManager:
   - InteracUI
   - Porte
   - Potion
+  - Redirection
+  - Carte
   layers:
   - Default
   - TransparentFX
