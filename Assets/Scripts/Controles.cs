@@ -16,9 +16,9 @@ public class Controles : MonoBehaviour
     //Iframe
     private bool invincible = false;
     //UI vie
-    //public Image[] coeur;
-    //public Sprite vie_remplie;
-    //public Sprite vie_vide;
+    public Image[] coeur;
+    public Sprite vie_remplie;
+    public Sprite vie_vide;
 
     private Animator anim;
     private SpriteRenderer spriteRenderer;
@@ -53,16 +53,16 @@ public class Controles : MonoBehaviour
         //ANIMATION
         anim.SetBool("run", horizontal!=0 || vertical!=0);
 
-        ////UI VIE
-        //foreach(Image img in coeur)
-        //{
-        //    img.sprite = vie_vide;
-        //}
-        ////equivalent de for i in range de python
-        //for(int i = 0; i<pv; i++)
-        //{
-        //    coeur[i].sprite = vie_remplie;
-        //}
+        //UI VIE
+        foreach(Image img in coeur)
+        {
+            img.sprite = vie_vide;
+        }
+        //equivalent de for i in range de python
+        for(int i = 0; i<pv; i++)
+        {
+            coeur[i].sprite = vie_remplie;
+        }
     }
 
 
@@ -98,6 +98,6 @@ public class Controles : MonoBehaviour
     }
     public void restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadSceneAsync(4);
     }
 }
