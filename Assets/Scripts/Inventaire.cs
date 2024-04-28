@@ -10,6 +10,7 @@ public class Inventaire : MonoBehaviour
     public Image UI_key;
     public Image lettre;
     public Image UI_potion;
+    public Image UI_carte;
      
 
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class Inventaire : MonoBehaviour
         UI_key.enabled = false;
         lettre.enabled = false; 
         UI_potion.enabled = false; 
+        UI_carte.enabled = false;
     }
 
     // Update is called once per frame
@@ -40,6 +42,18 @@ public class Inventaire : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             UI_potion.enabled = true; 
+        }
+        if (other.CompareTag("Carte"))
+        {
+            UI_carte.enabled = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.CompareTag("Carte"))
+        {
+            UI_carte.enabled = false; 
         }
     }
 

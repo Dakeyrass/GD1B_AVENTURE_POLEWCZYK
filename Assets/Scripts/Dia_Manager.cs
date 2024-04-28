@@ -42,7 +42,6 @@ public class Dia_Manager : MonoBehaviour
         Debug.Log(sentences.Count);
         if(sentences.Count == 0)
         {
-            Debug.Log("NTR AUSSI");
             EndDialogue();
             return;
         }
